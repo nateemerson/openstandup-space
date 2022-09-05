@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const rulesMarkdown = `1. Don't talk about proprietary stuff.
+2. DO NOT talk about corp/NDA/confidential/anything-that-might-get-you-in-legal-trouble stuff!
+3. If someone yells "parking lot!" or double ✌'s...the topic is over.
+4. Minimum 5 shares per stand-up.
+5. Only one person sharing at a time.
+6. The repos are OSS. No closed source...no rights reserved...no per-core seats...
+7. Stand-ups will go on as long as they have to unless Nate has to leave.
+8. If this is your first time at standup, you **[SHOULD](https://www.ietf.org/rfc/rfc2119.txt)** share.`;
+const f = (arg: number) => {
+	return (arg: number) => {}
+}
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="absolute bg-gradient-to-l from-[#f6d365] to-[#fda085] opacity-40 w-full h-full z-10">&nbsp;</div>
+	<main>
+		<h1 class="text-9xl">Welcome to <span class="text-gradient">OpenStandup</span></h1>
+		<article class="content prose lg:prose-xl">
+			{{ rulesMarkdown }}
+		</article>
+		<ol class="bg-clip-text bg-gradient-to-r from-[#f6d365] to-[#fda085] list-decimal text-3xl list-inside font-extrabold text-transparent mt-5">
+			<li>Don't talk about proprietary stuff.</li>
+			<li>DO NOT talk about corp/NDA/confidential/anything-that-might-get-you-in-legal-trouble stuff!</li>
+			<li>If someone yells "parking lot!" or double ✌'s...the topic is over.</li>
+			<li>Minimum 5 shares per stand-up.</li>
+			<li>Only one person sharing at a time.</li>
+			<li>The repos are OSS. No closed source...no rights reserved...no per-core seats...</li>
+			<li>Stand-ups will go on as long as they have to unless Nate has to leave.</li>
+			<li>If this is your first time at standup, you **[SHOULD](https://www.ietf.org/rfc/rfc2119.txt)** share.</li>
+		</ol>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #fff, #ccc);
+	}
+
+	main {
+		margin: 0 0 0 1em;
+		padding: 0 0 0 1em;
+		max-width: 90%;
+	}
+
+	body {
+		background-color: #000;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		opacity: 0.8;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

@@ -15,7 +15,7 @@ Welcome to Open Standup!
 7. Stand-ups will go on as long as they have to unless Nate has to leave.
 8. If this is your first time at standup, you **[SHOULD](https://www.ietf.org/rfc/rfc2119.txt)** share.
 
-
 ## Credit
 
 Credit to [Astro](https://astro.build) and [Solid](https://solidjs.com)
+Credit to [Cedar](https://twitter.com/C_edar_) for the design!
